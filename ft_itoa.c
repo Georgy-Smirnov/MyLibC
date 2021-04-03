@@ -6,13 +6,13 @@
 /*   By: kjaco <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 19:00:13 by kjaco             #+#    #+#             */
-/*   Updated: 2021/03/09 14:47:15 by kjaco            ###   ########.fr       */
+/*   Updated: 2021/04/01 20:08:47 by kjaco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ten_in_pow(int pow)
+int	ten_in_pow(int pow)
 {
 	int	rez;
 
@@ -25,7 +25,7 @@ int		ten_in_pow(int pow)
 	return (rez);
 }
 
-int		count_digit_in_num(long long n)
+int	count_digit_in_num(long long n)
 {
 	int	count;
 

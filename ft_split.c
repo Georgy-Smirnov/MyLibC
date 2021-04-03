@@ -6,7 +6,7 @@
 /*   By: kjaco <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 21:31:59 by kjaco             #+#    #+#             */
-/*   Updated: 2021/03/09 14:36:05 by kjaco            ###   ########.fr       */
+/*   Updated: 2021/04/01 20:08:05 by kjaco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	all_free(char **rez, int count)
 	free(rez);
 }
 
-int		count_word(char const *s, char c)
+int	count_word(char const *s, char c)
 {
 	int	i;
 	int	k;

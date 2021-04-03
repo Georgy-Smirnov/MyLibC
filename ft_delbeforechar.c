@@ -6,7 +6,7 @@
 /*   By: kjaco <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:56:14 by kjaco             #+#    #+#             */
-/*   Updated: 2021/03/09 15:09:22 by kjaco            ###   ########.fr       */
+/*   Updated: 2021/04/01 20:08:23 by kjaco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_delbeforechar(char a, char *str)
 	return (rez);
 }
 
-int		charinstr(char a, char *str)
+int	charinstr(char a, char *str)
 {
 	int	i;
 

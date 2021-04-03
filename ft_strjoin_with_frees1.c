@@ -6,13 +6,13 @@
 /*   By: kjaco <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 14:53:30 by kjaco             #+#    #+#             */
-/*   Updated: 2021/03/09 15:09:49 by kjaco            ###   ########.fr       */
+/*   Updated: 2021/04/01 20:07:27 by kjaco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		put_count_bytes_in_strs(char *s1, char *s2)
+int	put_count_bytes_in_strs(char *s1, char *s2)
 {
 	int	i;
 	int	count;

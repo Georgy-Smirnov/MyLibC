@@ -6,13 +6,13 @@
 /*   By: kjaco <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 19:54:39 by kjaco             #+#    #+#             */
-/*   Updated: 2021/03/09 14:46:21 by kjaco            ###   ########.fr       */
+/*   Updated: 2021/04/01 20:07:06 by kjaco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		search_start(char const *s1, char const *set)
+int	search_start(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,7 @@ int		search_start(char const *s1, char const *set)
 	return (i);
 }
 
-int		search_end(char const *s1, char const *set)
+int	search_end(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
