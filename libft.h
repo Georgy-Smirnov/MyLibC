@@ -6,7 +6,7 @@
 /*   By: kjaco <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 21:44:52 by kjaco             #+#    #+#             */
-/*   Updated: 2021/04/01 20:09:42 by kjaco            ###   ########.fr       */
+/*   Updated: 2021/05/26 14:40:57 by kjaco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ char			*ft_delbeforechar(char a, char *str);
 char			*ft_strjoin_with_frees1(char *s1, char *s2);
 int				charinstr(char a, char *str);
 int				get_next_line(int fd, char **line);
+char			*ft_dellastchar(char *str);
 
 typedef struct s_list
 {

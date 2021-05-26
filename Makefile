@@ -6,7 +6,7 @@
 #    By: kjaco <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/01 20:20:47 by kjaco             #+#    #+#              #
-#    Updated: 2021/04/03 14:02:17 by kjaco            ###   ########.fr        #
+#    Updated: 2021/05/26 14:41:43 by kjaco            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,7 @@ SRCS		= ft_memset.c \
 			  ft_delbeforechar.c \
 			  ft_strjoin_with_frees1.c \
 			  ft_get_next_line.c \
+			  ft_dellastchar.c \
 			  ft_lstnew.c \
 			  ft_lstadd_front.c \
 			  ft_lstsize.c \
