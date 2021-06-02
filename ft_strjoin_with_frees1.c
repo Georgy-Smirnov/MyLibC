@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	put_count_bytes_in_strs(char *s1, char *s2)
+int	put_count_bytes_in_str(char *s1, char *s2)
 {
 	int	i;
 	int	count;
@@ -42,7 +42,7 @@ char	*ft_strjoin_with_frees1(char *s1, char *s2)
 	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	rezult = malloc((put_count_bytes_in_strs(s1, s2) + 1) * sizeof(char));
+	rezult = malloc((put_count_bytes_in_str(s1, s2) + 1) * sizeof(char));
 	if (rezult == NULL)
 	{
 		free(s1);
