@@ -12,18 +12,27 @@
 
 ## START_MAKEFILE ##
 
-#===============================>COLORS<===============================#
+#==================================>COLORS<====================================#
 
-_RED		=	\e[31m
-_YELLOW		=	\e[33m
-_GREEN		=	\e[32m
-_END		=	\e[0m
+# This is a minimal set of ANSI/VT100 color codes
+_END		=	\x1b[0m
+_BOLD		=	\x1b[1m
+_UNDER		=	\x1b[4m
+_REV		=	\x1b[7m
 
-# ===================================================================== #
+# Colors
+_GREY		=	\x1b[30m
+_RED		=	\x1b[31m
+_GREEN		=	\x1b[32m
+_YELLOW		=	\x1b[33m
+_BLUE		=	\x1b[34m
+_PURPLE		=	\x1b[35m
+_CYAN		=	\x1b[36m
+_WHITE		=	\x1b[37m
 
-#===============================>FILES<===============================#
+#==================================>FILES<=====================================#
 
-SRCS		= ft_memset.c \
+SRC			= ft_memset.c \
 			  ft_bzero.c \
 			  ft_memcpy.c \
 			  ft_memccpy.c \
@@ -72,9 +81,9 @@ SRCS		= ft_memset.c \
 			  ft_lstiter.c \
 			  ft_lstmap.c
 
-# ===================================================================== #
+SRCS		=	$(SRC)
 
-#============================>COMPILATIONS<============================#
+#===============================>COMPILATIONS<=================================#
 
 GCC			=	gcc
 
@@ -82,19 +91,26 @@ AR			=	ar rc
 
 CFLAGS		=	-Wall -Werror -Wextra
 
-#===============================>DELETE<===============================#
+#===================================>DELETE<===================================#
 
-RM			=	rm -f
+RM			=	rm -rf
 
-#============================>HEADER_FILE<============================#
+#=================================>DIRECTORIES<================================#
 
 DIR_HEAD	=	./
 
-#==========================>COMPILING_RULES<==========================#
+DIR_SRCS	=	./
 
-OBJS		=	${SRCS:%.c=%.o}
+DIR_OBJS	=	./object_files/
+
+#===============================>COMPILED_SOURCES<=============================#
+
+OBJS		=	${SRCS:%.c=${DIR_OBJS}%.o}
 
 NAME		=	Libft.a
+
+#================================>COMPILED_RULES<==============================#
+
 
 all:			${NAME}
 
@@ -103,20 +119,27 @@ ${NAME}:		${OBJS}
 				@ranlib ${NAME}
 				@printf "\033[2K\r${_GREEN} Library create: '${NAME}'. ${_END}✅\n"
 
-%.o:			%.c
-				@printf "\033[2K\r${_YELLOW} ⌛ Compilling $< ${_END}\n"
-				@${GCC} ${CFLAGS} -I ${DIR_HEAD} -c $< -o $@
+#===========================>COMPILED_SOURCES_RULES<===========================#
 
-#==========================>NORM_RULES<===========================#
+$(OBJS):		| $(DIR_OBJS)
+
+$(DIR_OBJS)%.o: $(DIR_SRCS)%.c
+				@$(GCC) $(CFLAGS) -I $(DIR_HEAD) -c $< -o $@
+				@printf "\033[2K\r$(_YELLOW) Compiling $< $(_END)⌛"
+
+$(DIR_OBJS):
+				@mkdir $(DIR_OBJS)
+
+#===================================>NORM_RULES<===============================#
 
 norm:
 				@norminette *.c
 				@norminette *.h				
 
-#==========================>CLEAN_RULES<==========================#
+#====================================>CLEAN_RULES<=============================#
 
 clean:
-				@${RM} ${OBJS}
+				@${RM} ${DIR_OBJS}
 				@printf "\033[2K\r${_RED} '".o"' has been deleted. ${_END}🗑️\n"
 
 fclean:			clean	
