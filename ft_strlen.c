@@ -6,13 +6,13 @@
 /*   By: kjaco <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 19:44:34 by kjaco             #+#    #+#             */
-/*   Updated: 2021/03/09 14:37:47 by kjaco            ###   ########.fr       */
+/*   Updated: 2022/01/21 19:26:09 by kjaco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *src)
+int	ft_strlen(const char *src)
 {
 	int	i;
 
